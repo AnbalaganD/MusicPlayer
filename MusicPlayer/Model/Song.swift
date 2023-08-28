@@ -13,12 +13,12 @@ struct Song {
     let url: URL
 }
 
-//Testing purpose
+// Testing purpose
 extension Song {
     static let placeholder = Song(
         id: "111",
         name: "My song",
         url: URL(string: "https://www.kozco.com/tech/piano2.wav")!
-        //"https://www.kozco.com/tech/LRMonoPhase4.mp3")!
+        // "https://www.kozco.com/tech/LRMonoPhase4.mp3")!
     )
 }

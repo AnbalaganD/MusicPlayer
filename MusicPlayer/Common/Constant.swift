@@ -9,7 +9,7 @@ import Foundation
 
 struct Constant {
     private init() { }
-    
+
     static let apiKey = "b7cee9fc266dc92d1ecdec1549f118a7"
     static let clientSecret = "b79b7f00cb6debb23914ba55b64cd914"
 }
