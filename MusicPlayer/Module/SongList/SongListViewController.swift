@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Combine
 
 final class SongListViewController: UIViewController {
-
-    private var songs = [Song]()
+    private let viewModel = SongListViewModel()
+    private var subscriptions = Set<AnyCancellable>()
 
     private let songsListTableView = with(UITableView()) {
         $0.translatesAutoresizingMaskIntoConstraints = false
@@ -18,8 +19,18 @@ final class SongListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getSongs()
         setupView()
+        bindViewModel()
+        viewModel.getSongs()
+    }
+
+    private func bindViewModel() {
+        viewModel.$songs
+            .sink {[weak self] songs in
+                print(self?.viewModel.songs ?? "")
+                print(songs)
+            }
+            .store(in: &subscriptions)
     }
 
     private func setupView() {
@@ -39,7 +50,7 @@ final class SongListViewController: UIViewController {
 
 extension SongListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        songs.count
+        viewModel.songs.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -47,24 +58,21 @@ extension SongListViewController: UITableViewDelegate, UITableViewDataSource {
             withIdentifier: SongsListCell.cellReuseIdentifier,
             for: indexPath
         ) as! SongsListCell // swiftlint:disable:this force_cast
-        cell.setupData(songs[indexPath.row])
+        cell.setupData(viewModel.songs[indexPath.row])
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailViewController = SongDetailViewController(song: songs[indexPath.row])
+        let detailViewController = SongDetailViewController(song: viewModel.songs[indexPath.row])
         navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
-extension SongListViewController {
-    func getSongs() {
-        songs.append(contentsOf: [
-            .placeholder,
-            .placeholder,
-            .placeholder,
-            .placeholder,
-            .placeholder
-        ])
+@propertyWrapper
+struct Bind<Value> {
+    var wrappedValue: Value
+    
+    var projectedValue: CurrentValueSubject<Value, Never> {
+        CurrentValueSubject(wrappedValue)
     }
 }

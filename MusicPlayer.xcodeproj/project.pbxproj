@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542C803E2AA6D532007E3A7D /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C803D2AA6D532007E3A7D /* SongListViewModel.swift */; };
 		54CE52422A96297300AF14EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE52412A96297300AF14EA /* AppDelegate.swift */; };
 		54CE52442A96297300AF14EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE52432A96297300AF14EA /* SceneDelegate.swift */; };
 		54CE524B2A96297600AF14EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CE524A2A96297600AF14EA /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		542C803D2AA6D532007E3A7D /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
 		5490652B2A9A363200E6CA51 /* swift_lint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swift_lint.sh; sourceTree = "<group>"; };
 		54CE523E2A96297300AF14EA /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CE52412A96297300AF14EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				54CE525F2A962CED00AF14EA /* SongListViewController.swift */,
+				542C803D2AA6D532007E3A7D /* SongListViewModel.swift */,
 			);
 			path = SongList;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				54CE526E2A96340200AF14EA /* PlayerView.swift in Sources */,
 				54CE52692A96314B00AF14EA /* SongDetailViewController.swift in Sources */,
 				54CE52632A962D0D00AF14EA /* SongsListCell.swift in Sources */,
+				542C803E2AA6D532007E3A7D /* SongListViewModel.swift in Sources */,
 				54CE52662A962DBD00AF14EA /* Song.swift in Sources */,
 				54CE52442A96297300AF14EA /* SceneDelegate.swift in Sources */,
 				54CE525A2A962AFF00AF14EA /* Constant.swift in Sources */,
