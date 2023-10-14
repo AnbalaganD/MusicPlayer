@@ -71,7 +71,7 @@ extension SongListViewController: UITableViewDelegate, UITableViewDataSource {
 @propertyWrapper
 struct Bind<Value> {
     var wrappedValue: Value
-    
+
     var projectedValue: CurrentValueSubject<Value, Never> {
         CurrentValueSubject(wrappedValue)
     }

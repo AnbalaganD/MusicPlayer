@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		542C803E2AA6D532007E3A7D /* SongListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 542C803D2AA6D532007E3A7D /* SongListViewModel.swift */; };
+		547039612ACB5CCD00AB4045 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 547039602ACB5CCD00AB4045 /* GoogleSignIn */; };
+		547039632ACB5CCD00AB4045 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 547039622ACB5CCD00AB4045 /* GoogleSignInSwift */; };
+		547039662ACB5EEE00AB4045 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547039652ACB5EEE00AB4045 /* LoginViewController.swift */; };
+		547039682ACB5EF600AB4045 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 547039672ACB5EF600AB4045 /* LoginViewModel.swift */; };
 		54CE52422A96297300AF14EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE52412A96297300AF14EA /* AppDelegate.swift */; };
 		54CE52442A96297300AF14EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE52432A96297300AF14EA /* SceneDelegate.swift */; };
 		54CE524B2A96297600AF14EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54CE524A2A96297600AF14EA /* Assets.xcassets */; };
@@ -26,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		542C803D2AA6D532007E3A7D /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
+		547039652ACB5EEE00AB4045 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		547039672ACB5EF600AB4045 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5490652B2A9A363200E6CA51 /* swift_lint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swift_lint.sh; sourceTree = "<group>"; };
 		54CE523E2A96297300AF14EA /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CE52412A96297300AF14EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -50,12 +56,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547039612ACB5CCD00AB4045 /* GoogleSignIn in Frameworks */,
+				547039632ACB5CCD00AB4045 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		547039642ACB5EE000AB4045 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				547039652ACB5EEE00AB4045 /* LoginViewController.swift */,
+				547039672ACB5EF600AB4045 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		5490652A2A9A361C00E6CA51 /* Script */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +127,7 @@
 		54CE52562A962ACA00AF14EA /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				547039642ACB5EE000AB4045 /* Login */,
 				54CE526A2A9633A700AF14EA /* AudioPlayer */,
 				54CE52672A96313200AF14EA /* SongDetail */,
 				54CE525E2A962CCD00AF14EA /* SongList */,
@@ -209,6 +227,10 @@
 			dependencies = (
 			);
 			name = MusicPlayer;
+			packageProductDependencies = (
+				547039602ACB5CCD00AB4045 /* GoogleSignIn */,
+				547039622ACB5CCD00AB4045 /* GoogleSignInSwift */,
+			);
 			productName = MusicPlayer;
 			productReference = 54CE523E2A96297300AF14EA /* MusicPlayer.app */;
 			productType = "com.apple.product-type.application";
@@ -237,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 54CE52352A96297300AF14EA;
+			packageReferences = (
+				5470395F2ACB5CCD00AB4045 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 54CE523F2A96297300AF14EA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547039662ACB5EEE00AB4045 /* LoginViewController.swift in Sources */,
 				54CE525D2A962B9900AF14EA /* MiscUtils.swift in Sources */,
 				54CE52422A96297300AF14EA /* AppDelegate.swift in Sources */,
 				54CE52732A9639A800AF14EA /* PlayerStatus.swift in Sources */,
@@ -292,6 +318,7 @@
 				54CE526C2A9633B900AF14EA /* AudioPlayer.swift in Sources */,
 				54CE526E2A96340200AF14EA /* PlayerView.swift in Sources */,
 				54CE52692A96314B00AF14EA /* SongDetailViewController.swift in Sources */,
+				547039682ACB5EF600AB4045 /* LoginViewModel.swift in Sources */,
 				54CE52632A962D0D00AF14EA /* SongsListCell.swift in Sources */,
 				542C803E2AA6D532007E3A7D /* SongListViewModel.swift in Sources */,
 				54CE52662A962DBD00AF14EA /* Song.swift in Sources */,
@@ -512,6 +539,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5470395F2ACB5CCD00AB4045 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		547039602ACB5CCD00AB4045 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5470395F2ACB5CCD00AB4045 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		547039622ACB5CCD00AB4045 /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5470395F2ACB5CCD00AB4045 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 54CE52362A96297300AF14EA /* Project object */;
 }
