@@ -7,8 +7,8 @@
 
 @inlinable func with<T: AnyObject>(
     _ object: T,
-    action: (T) -> Void
-) -> T {
-    action(object)
+    action: (T) throws -> Void
+) rethrows -> T {
+    try action(object)
     return object
 }
