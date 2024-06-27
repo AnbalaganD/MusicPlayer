@@ -4,7 +4,13 @@ stages:
 build_project:
   stage: build
   script:
-    - echo 'Build process initiated'
-    # - xcodebuild -project MusicPlayer.xcodeproj -target MusicPlayer -configuration Release
+    - |
+      which -s brew
+      if [[ $? != 0 ]] ; then=
+        echo "Homebrew not installed!!!!!"
+      else
+         echo "Homebrew installed already"
+      fi
+      # - xcodebuild -project MusicPlayer.xcodeproj -target MusicPlayer -configuration Release
   tags:
     - macos
