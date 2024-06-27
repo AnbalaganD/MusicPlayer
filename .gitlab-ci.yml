@@ -5,6 +5,6 @@ build_project:
   stage: build
   script:
     - |
-      brew install jq
+      /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   tags:
     - macos
