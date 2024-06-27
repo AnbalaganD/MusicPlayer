@@ -5,7 +5,7 @@ build_project:
   stage: build
   script:
     - |
-      echo $(which brew)
+      which brew
       # which -s brew
       # if [[ $? != 0 ]] ; then=
       #   echo "Homebrew not installed!!!!!"
