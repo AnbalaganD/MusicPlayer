@@ -5,13 +5,6 @@ build_project:
   stage: build
   script:
     - |
-      which brew
-      # which -s brew
-      # if [[ $? != 0 ]] ; then=
-      #   echo "Homebrew not installed!!!!!"
-      # else
-      #    echo "Homebrew installed already"
-      # fi
-      # - xcodebuild -project MusicPlayer.xcodeproj -target MusicPlayer -configuration Release
+      brew install jq
   tags:
     - macos
