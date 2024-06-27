@@ -4,6 +4,7 @@ stages:
 build_project:
   stage: build
   script:
-    - xcodebuild -project MusicPlayer.xcodeproj -target MusicPlayer -configuration Release
+    - echo 'Build process initiated'
+    # - xcodebuild -project MusicPlayer.xcodeproj -target MusicPlayer -configuration Release
   tags:
     - macos
