@@ -106,7 +106,6 @@
 				54CE52612A962D0200AF14EA /* Cells */,
 				54CE525B2A962B8000AF14EA /* Misc */,
 				54CE52582A962AE200AF14EA /* Support */,
-				54CE52572A962AD800AF14EA /* Service */,
 				54CE52562A962ACA00AF14EA /* Module */,
 				54CE52552A962AC300AF14EA /* Common */,
 				54CE524A2A96297600AF14EA /* Assets.xcassets */,
@@ -133,13 +132,6 @@
 				54CE525E2A962CCD00AF14EA /* SongList */,
 			);
 			path = Module;
-			sourceTree = "<group>";
-		};
-		54CE52572A962AD800AF14EA /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		54CE52582A962AE200AF14EA /* Support */ = {
