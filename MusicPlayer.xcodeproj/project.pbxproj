@@ -209,10 +209,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54CE52522A96297600AF14EA /* Build configuration list for PBXNativeTarget "MusicPlayer" */;
 			buildPhases = (
+				547398042A9C762D00ECE2C5 /* Lint Swift Code */,
 				54CE523A2A96297300AF14EA /* Sources */,
 				54CE523B2A96297300AF14EA /* Frameworks */,
 				54CE523C2A96297300AF14EA /* Resources */,
-				547398042A9C762D00ECE2C5 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -276,20 +276,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		547398042A9C762D00ECE2C5 /* Run Script */ = {
+		547398042A9C762D00ECE2C5 /* Lint Swift Code */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"$(SRCROOT)/build/build_phases/MusicPlayer_swiftlint.xcfilelist",
 			);
 			inputPaths = (
 			);
-			name = "Run Script";
+			name = "Lint Swift Code";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(SRCROOT)/build/build_phases/MusicPlayer_swiftlint_static_output",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
