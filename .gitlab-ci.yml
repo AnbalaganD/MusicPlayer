@@ -4,7 +4,6 @@ stages:
 build_project:
   stage: build
   script:
-    - |
-      /bin/bash -c "$(curl -fsSL raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    - echo "Build process started"
   tags:
     - macos
