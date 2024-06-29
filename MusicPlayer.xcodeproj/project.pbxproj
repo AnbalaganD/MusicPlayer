@@ -101,6 +101,7 @@
 		54CE52402A96297300AF14EA /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				9965A2C62C30965700EB7099 /* Resources */,
 				54CE526F2A9635F200AF14EA /* Extension */,
 				54CE52642A962DAD00AF14EA /* Model */,
 				54CE52612A962D0200AF14EA /* Cells */,
@@ -108,9 +109,6 @@
 				54CE52582A962AE200AF14EA /* Support */,
 				54CE52562A962ACA00AF14EA /* Module */,
 				54CE52552A962AC300AF14EA /* Common */,
-				54CE524A2A96297600AF14EA /* Assets.xcassets */,
-				54CE524C2A96297600AF14EA /* LaunchScreen.storyboard */,
-				54CE524F2A96297600AF14EA /* Info.plist */,
 			);
 			path = MusicPlayer;
 			sourceTree = "<group>";
@@ -137,6 +135,7 @@
 		54CE52582A962AE200AF14EA /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				54CE524F2A96297600AF14EA /* Info.plist */,
 				54CE52412A96297300AF14EA /* AppDelegate.swift */,
 				54CE52432A96297300AF14EA /* SceneDelegate.swift */,
 			);
@@ -200,6 +199,15 @@
 				54CE52702A96360000AF14EA /* UIViewExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		9965A2C62C30965700EB7099 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				54CE524C2A96297600AF14EA /* LaunchScreen.storyboard */,
+				54CE524A2A96297600AF14EA /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,7 +472,7 @@
 				DEVELOPMENT_TEAM = G9Y62JV6M7;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MusicPlayer/Info.plist;
+				INFOPLIST_FILE = MusicPlayer/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -492,7 +500,7 @@
 				DEVELOPMENT_TEAM = G9Y62JV6M7;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MusicPlayer/Info.plist;
+				INFOPLIST_FILE = MusicPlayer/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
