@@ -35,3 +35,4 @@ Carthage/Build
 #
 # Pods/
 *.xcworkspace/xcshareddata
+IDEWorkspaceChecks.plist
