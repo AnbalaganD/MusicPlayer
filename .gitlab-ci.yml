@@ -5,7 +5,7 @@ build_project:
   stage: build
   script:
     - echo "Build process started"
-    - echo $(ls)
+    - ls
     - pwd
   tags:
     - macos
