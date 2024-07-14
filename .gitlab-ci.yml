@@ -6,5 +6,6 @@ build_project:
   script:
     - echo "Build process started"
     - echo $(ls)
+    - pwd
   tags:
     - macos
