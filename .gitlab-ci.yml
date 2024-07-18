@@ -11,6 +11,8 @@ build_project:
   script:
     - chmod +x ./Script/build.sh
     - ./Script/build.sh > logs.log
+  after_script:
+    - rm -rf build
   artifacts:
     when: always
     paths:
