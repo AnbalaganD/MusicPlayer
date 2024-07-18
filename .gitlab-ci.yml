@@ -9,5 +9,5 @@ build_project:
     - echo "Build process started"
     - ls
     - pwd
-    - echo "$CI_BUILDS_DIR"
+    - echo "$CI_PROJECT_DIR"
   
