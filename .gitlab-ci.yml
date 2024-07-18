@@ -6,14 +6,11 @@ build_project:
   tags:
     - macos
   script:
-    - echo "Build process started"
-    - ls
-    - pwd
-    - echo "$CI_PROJECT_DIR"
     - chmod +x ./Script/build.sh
     - ./Script/build.sh > logs.log
 
   artifacts:
+    when: always
     paths:
       - logs.log
 
