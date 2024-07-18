@@ -1,11 +1,24 @@
 stages:
+  # - pre_actions
   - build
+
+# pre_action:
+#   stage: pre_actions
+#   tags:
+#     - macos
+#   script:
+#     - chmod +x generate_swifttlint_filelist.sh
+#     - ./generate_swifttlint_filelist.sh
+#   cache:
+#     key: input-files
+#     paths:
+#       - input_file/
 
 build_project:
   stage: build
   tags:
     - macos
-  pre-script:
+  pre_script:
     - chmod +x generate_swifttlint_filelist.sh
     - ./generate_swifttlint_filelist.sh
   script:
