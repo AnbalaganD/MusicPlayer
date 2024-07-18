@@ -3,9 +3,11 @@ stages:
 
 build_project:
   stage: build
+  tags:
+    - macos
   script:
     - echo "Build process started"
     - ls
     - pwd
-  tags:
-    - macos
+    - echo "$CI_BUILDS_DIR"
+  
