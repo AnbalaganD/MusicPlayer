@@ -10,7 +10,7 @@ build_project:
     - ls
     - pwd
     - echo "$CI_PROJECT_DIR"
-    - chmod +x ./scripts/build.sh
-    - ./scripts/build.sh
+    - chmod +x ./Script/build.sh
+    - ./Script/build.sh
 
   
