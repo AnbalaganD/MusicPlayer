@@ -1,5 +1,14 @@
 stages:
+  - pre_actions
   - build
+
+pre_action:
+  stage: pre_actions
+  tags:
+    - macos
+  script:
+    - chmod +x generate_swifttlint_filelist.sh
+    - sh generate_swifttlint_filelist.sh
 
 build_project:
   stage: build
@@ -13,5 +22,3 @@ build_project:
     when: always
     paths:
       - logs.log
-
-  
