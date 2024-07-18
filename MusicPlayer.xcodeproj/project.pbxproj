@@ -32,7 +32,6 @@
 		542C803D2AA6D532007E3A7D /* SongListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListViewModel.swift; sourceTree = "<group>"; };
 		547039652ACB5EEE00AB4045 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		547039672ACB5EF600AB4045 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		5490652B2A9A363200E6CA51 /* swift_lint.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = swift_lint.sh; sourceTree = "<group>"; };
 		54CE523E2A96297300AF14EA /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CE52412A96297300AF14EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54CE52432A96297300AF14EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,18 +72,9 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		5490652A2A9A361C00E6CA51 /* Script */ = {
-			isa = PBXGroup;
-			children = (
-				5490652B2A9A363200E6CA51 /* swift_lint.sh */,
-			);
-			path = Script;
-			sourceTree = "<group>";
-		};
 		54CE52352A96297300AF14EA = {
 			isa = PBXGroup;
 			children = (
-				5490652A2A9A361C00E6CA51 /* Script */,
 				54CE52402A96297300AF14EA /* MusicPlayer */,
 				54CE523F2A96297300AF14EA /* Products */,
 			);
