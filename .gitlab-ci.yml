@@ -9,10 +9,6 @@ pre_action:
   script:
     - chmod +x generate_swifttlint_filelist.sh
     - ./generate_swifttlint_filelist.sh
-  cache:
-    key: input-files
-    paths:
-      - input_file/
 
 build_project:
   stage: build
@@ -21,6 +17,8 @@ build_project:
   script:
     - chmod +x ./Script/build.sh
     - ./Script/build.sh > logs.log
+  dependencies:
+    - pre_action
   artifacts:
     when: always
     paths:
