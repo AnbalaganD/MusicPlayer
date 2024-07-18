@@ -280,7 +280,7 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"$(SRCROOT)/build/build_phases/MusicPlayer_swiftlint.xcfilelist",
+				"$(SRCROOT)/input_file/build_phases/MusicPlayer_swiftlint.xcfilelist",
 			);
 			inputPaths = (
 			);
@@ -288,7 +288,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(SRCROOT)/build/build_phases/MusicPlayer_swiftlint_static_output",
+				"$(SRCROOT)/input_file/build_phases/MusicPlayer_swiftlint_static_output",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
