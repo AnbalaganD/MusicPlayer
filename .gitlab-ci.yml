@@ -11,6 +11,10 @@ build_project:
     - pwd
     - echo "$CI_PROJECT_DIR"
     - chmod +x ./Script/build.sh
-    - ./Script/build.sh
+    - ./Script/build.sh > logs.log
+
+  artifacts:
+    paths:
+      - logs.log
 
   
