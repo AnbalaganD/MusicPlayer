@@ -8,7 +8,7 @@ pre_action:
     - macos
   script:
     - chmod +x generate_swifttlint_filelist.sh
-    - generate_swifttlint_filelist.sh
+    - ./generate_swifttlint_filelist.sh
 
 build_project:
   stage: build
