@@ -13,13 +13,13 @@ build_project:
       chmod +x ./Script/build.sh
       if [[ -n "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
         echo "Within If condition"
-        ./Script/build.sh > ./output/build.log
+        mkdir output
+        ./Script/build.sh > output/build.log
       else
         echo "Within else block"
         ./Script/build.sh
       fi
   after_script:
-    - mkdir output
     - rm -rf build
   artifacts:
     when: always
