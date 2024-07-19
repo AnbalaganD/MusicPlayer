@@ -11,7 +11,7 @@ build_project:
   script:
     - |
       chmod +x ./Script/build.sh
-      if [[ -z "$COLLECT_LOG" && "$COLLECT_LOG" == true ]]; then
+      if [[ -z "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
         echo "Within If condition"
         ./Script/build.sh > logs.log
       else
