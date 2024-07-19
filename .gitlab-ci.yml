@@ -23,4 +23,4 @@ build_project:
   artifacts:
     when: always
     paths:
-      - output/
+      - output
