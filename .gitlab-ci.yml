@@ -9,6 +9,7 @@ build_project:
     - chmod +x generate_swifttlint_filelist.sh
     - ./generate_swifttlint_filelist.sh
   script:
+    - echo "$COLLECT_LOG"
     - chmod +x ./Script/build.sh
     - ./Script/build.sh > logs.log
   after_script:
