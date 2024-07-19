@@ -19,6 +19,7 @@ build_project:
         ./Script/build.sh
       fi
   after_script:
+    - mkdir output
     - rm -rf build
   artifacts:
     when: always
