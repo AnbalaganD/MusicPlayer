@@ -24,3 +24,5 @@ build_project:
     when: always
     paths:
       - logs.log
+    rules:
+      - if: "$COLLECT_LOG" == "true"
