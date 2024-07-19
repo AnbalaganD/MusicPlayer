@@ -9,9 +9,15 @@ build_project:
     - chmod +x generate_swifttlint_filelist.sh
     - ./generate_swifttlint_filelist.sh
   script:
-    - echo ">>>>>>>>> ${COLLECT_LOG}  >>>>>>>>>>"
-    - chmod +x ./Script/build.sh
-    - ./Script/build.sh > logs.log
+    - |
+      chmod +x ./Script/build.sh
+      if [[ -z "$COLLECT_LOG" && "$COLLECT_LOG" == true ]]; then
+        echo "Within If condition"
+        ./Script/build.sh > logs.log
+      else
+        echo "Within else block"
+        ./Script/build.sh
+      fi
   after_script:
     - rm -rf build
   artifacts:
