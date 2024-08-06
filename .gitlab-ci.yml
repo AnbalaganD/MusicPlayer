@@ -1,27 +1,37 @@
 stages:
-  - build
+  # - build
+  - deploy
 
-build_project:
-  stage: build
+# build_project:
+#   stage: build
+#   tags:
+#     - macos
+#   before_script:
+#     - chmod +x generate_swifttlint_filelist.sh
+#     - ./generate_swifttlint_filelist.sh
+#   script:
+#     - |
+#       chmod +x ./Script/build.sh
+#       if [[ -n "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
+#         echo "Within If condition"
+#         mkdir output
+#         ./Script/build.sh > output/build.log
+#       else
+#         echo "Within else block"
+#         ./Script/build.sh
+#       fi
+#   after_script:
+#     - rm -rf build
+#   artifacts:
+#     when: always
+#     paths:
+#       - output
+
+deploy_project:
+  stage: deploy
   tags:
     - macos
-  before_script:
-    - chmod +x generate_swifttlint_filelist.sh
-    - ./generate_swifttlint_filelist.sh
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   script:
-    - |
-      chmod +x ./Script/build.sh
-      if [[ -n "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
-        echo "Within If condition"
-        mkdir output
-        ./Script/build.sh > output/build.log
-      else
-        echo "Within else block"
-        ./Script/build.sh
-      fi
-  after_script:
-    - rm -rf build
-  artifacts:
-    when: always
-    paths:
-      - output
+    - aws s3 cp --recursive ./build s3://MYBUCKETNAME
+  environment: production
