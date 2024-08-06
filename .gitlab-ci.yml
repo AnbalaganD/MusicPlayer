@@ -31,7 +31,7 @@ deploy_project:
   stage: deploy
   tags:
     - macos
-  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  image: docker:registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   script:
     - aws s3 cp --recursive ./build s3://MYBUCKETNAME
   environment: production
