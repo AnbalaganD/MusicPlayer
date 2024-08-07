@@ -6,7 +6,7 @@ stages:
 resource_download:
   stage: resource_download
   tags:
-    - macos
+    - shell
   script:
     - echo "Resource downloaded from external server"
   rules:
@@ -16,7 +16,7 @@ resource_download:
 build_project:
   stage: build
   tags:
-    - macos
+    - shell
   before_script:
     - chmod +x generate_swifttlint_filelist.sh
     - ./generate_swifttlint_filelist.sh
@@ -41,7 +41,7 @@ build_project:
 deploy_project:
   stage: deploy
   tags:
-    - macos
+    - docker
   image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
   script:
     - aws s3 cp --recursive ./output s3://cobrandbuild --endpoint-url https://v1r0.va.idrivee2-20.com
