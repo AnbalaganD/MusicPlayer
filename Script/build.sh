@@ -2,4 +2,4 @@
 
 # xcodebuild -project MusicPlayer.xcodeproj -target MusicPlayer -configuration Release
 
-echo "Dummy build file" > build.txt
+echo "Dummy build file" > output/build.txt
