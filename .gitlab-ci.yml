@@ -7,8 +7,11 @@ resource_download:
   stage: resource_download
   tags:
     - macos
+  script:
+    - echo "Resource downloaded from external server"
   rules:
     - if: $IS_COBRAND_BUILD == "true"
+      when: always
 
 build_project:
   stage: build
