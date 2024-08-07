@@ -1,6 +1,14 @@
 stages:
+  - resource_download
   - build
   - deploy
+
+resource_download:
+  stage: resource_download
+  tags:
+    - macos
+  rules:
+    - if: $IS_COBRAND_BUILD == "true"
 
 build_project:
   stage: build
