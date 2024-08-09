@@ -12,6 +12,7 @@ resource_download:
   rules:
     - if: $IS_COBRAND_BUILD == "true"
       when: always
+    - if: '"$CI_PIPELINE_SOURCE" != "schedule"'
 
 build_project:
   stage: build
@@ -37,6 +38,8 @@ build_project:
     when: always
     paths:
       - output
+  rules:
+    - if: '"$CI_PIPELINE_SOURCE" != "schedule"'
 
 deploy_project:
   stage: deploy
@@ -46,3 +49,11 @@ deploy_project:
   script:
     - aws s3 cp --recursive ./output s3://cobrandbuild --endpoint-url https://v1r0.va.idrivee2-20.com
   environment: production
+  rules:
+    - if: '"$CI_PIPELINE_SOURCE" != "schedule"'
+
+heartbeat_job:
+  script:
+    - echo "Schedule job called"
+  rules:
+    - if: '"$CI_PIPELINE_SOURCE" == "schedule"'
