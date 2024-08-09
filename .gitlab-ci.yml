@@ -55,6 +55,8 @@ deploy_project:
 
 heartbeat_job:
   stage: monitor
+  tags:
+    - shell
   script:
     - echo "Schedule job called"
   rules:
