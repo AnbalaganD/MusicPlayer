@@ -1,4 +1,5 @@
 stages:
+  - monitor
   - resource_download
   - build
   - deploy
