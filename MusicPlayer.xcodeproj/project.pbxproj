@@ -27,7 +27,7 @@
 		54CE52712A96360000AF14EA /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE52702A96360000AF14EA /* UIViewExtension.swift */; };
 		54CE52732A9639A800AF14EA /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CE52722A9639A800AF14EA /* PlayerStatus.swift */; };
 		994743B62C4A98B80082AECA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994743B52C4A98B80082AECA /* AudioManager.swift */; };
-		998FE4792C663F2100A8933C /* BoundarySlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998FE4782C663F2100A8933C /* BoundarySlider.swift */; };
+		9981F3992C67B1DC0009DA7E /* BoundarySlider in Frameworks */ = {isa = PBXBuildFile; productRef = 9981F3982C67B1DC0009DA7E /* BoundarySlider */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,6 @@
 		54CE52702A96360000AF14EA /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		54CE52722A9639A800AF14EA /* PlayerStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerStatus.swift; sourceTree = "<group>"; };
 		994743B52C4A98B80082AECA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		998FE4782C663F2100A8933C /* BoundarySlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundarySlider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				547039612ACB5CCD00AB4045 /* GoogleSignIn in Frameworks */,
+				9981F3992C67B1DC0009DA7E /* BoundarySlider in Frameworks */,
 				547039632ACB5CCD00AB4045 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +95,6 @@
 		54CE52402A96297300AF14EA /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				998FE4772C663EB900A8933C /* Components */,
 				994743B42C4A989F0082AECA /* Utils */,
 				994743B02C4A96AF0082AECA /* Configuration */,
 				9965A2C62C30965700EB7099 /* Resources */,
@@ -222,14 +221,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		998FE4772C663EB900A8933C /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				998FE4782C663F2100A8933C /* BoundarySlider.swift */,
-			);
-			path = Components;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +241,7 @@
 			packageProductDependencies = (
 				547039602ACB5CCD00AB4045 /* GoogleSignIn */,
 				547039622ACB5CCD00AB4045 /* GoogleSignInSwift */,
+				9981F3982C67B1DC0009DA7E /* BoundarySlider */,
 			);
 			productName = MusicPlayer;
 			productReference = 54CE523E2A96297300AF14EA /* MusicPlayer.app */;
@@ -281,6 +273,7 @@
 			mainGroup = 54CE52352A96297300AF14EA;
 			packageReferences = (
 				5470395F2ACB5CCD00AB4045 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				9981F3972C67B1DC0009DA7E /* XCRemoteSwiftPackageReference "BoundarySlider" */,
 			);
 			productRefGroup = 54CE523F2A96297300AF14EA /* Products */;
 			projectDirPath = "";
@@ -339,7 +332,6 @@
 				54CE526C2A9633B900AF14EA /* AudioPlayer.swift in Sources */,
 				54CE526E2A96340200AF14EA /* PlayerView.swift in Sources */,
 				54CE52692A96314B00AF14EA /* SongDetailViewController.swift in Sources */,
-				998FE4792C663F2100A8933C /* BoundarySlider.swift in Sources */,
 				547039682ACB5EF600AB4045 /* LoginViewModel.swift in Sources */,
 				54CE52632A962D0D00AF14EA /* SongsListCell.swift in Sources */,
 				994743B62C4A98B80082AECA /* AudioManager.swift in Sources */,
@@ -580,6 +572,14 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		9981F3972C67B1DC0009DA7E /* XCRemoteSwiftPackageReference "BoundarySlider" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AnbalaganD/BoundarySlider";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -592,6 +592,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 5470395F2ACB5CCD00AB4045 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		9981F3982C67B1DC0009DA7E /* BoundarySlider */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9981F3972C67B1DC0009DA7E /* XCRemoteSwiftPackageReference "BoundarySlider" */;
+			productName = BoundarySlider;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

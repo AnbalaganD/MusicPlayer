@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import BoundarySlider
 
 final class SongDetailViewController: UIViewController {
 
@@ -20,10 +21,10 @@ final class SongDetailViewController: UIViewController {
         $0.setImage(UIImage(systemName: "play.fill"), for: .normal)
     }
 
-    private let boundarySlider = with(BoundarySlider(frame: .zero)) {
+    private let boundarySlider = with(BoundarySlider()) {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.minimumValue = 0.0
-        $0.maximumValue = 100
+        $0.maximumValue = 100.0
         $0.boundaries = [0.0, 15.0, 18.0, 22.0, 25.0, 49.0, 67.0]
     }
 
@@ -53,7 +54,7 @@ final class SongDetailViewController: UIViewController {
     }
 
     private func setupView() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         title = "Song Detail"
 
         view.addSubview(audioPlayerView)

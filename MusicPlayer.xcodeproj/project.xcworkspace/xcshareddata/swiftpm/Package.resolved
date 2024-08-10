@@ -1,5 +1,5 @@
 {
-  "originHash" : "68aa00e3cba36db2e0a76f54dbc84d1f079d8aa9a19bfa9fce02d6286bd620b7",
+  "originHash" : "6d7c668fcccf65a541226497b45f1fa327b556af8e590f210629e0f6974240ed",
   "pins" : [
     {
       "identity" : "appauth-ios",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "71cde449f13d453227e687458144bde372d30fc7",
         "version" : "1.6.2"
+      }
+    },
+    {
+      "identity" : "boundaryslider",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AnbalaganD/BoundarySlider",
+      "state" : {
+        "revision" : "b8c513278eeb50d57a6f09c6234ce8f6d71c3a31",
+        "version" : "0.1.1"
       }
     },
     {
