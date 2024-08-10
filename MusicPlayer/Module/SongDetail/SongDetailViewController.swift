@@ -20,6 +20,13 @@ final class SongDetailViewController: UIViewController {
         $0.setImage(UIImage(systemName: "play.fill"), for: .normal)
     }
 
+    private let boundarySlider = with(BoundarySlider(frame: .zero)) {
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        $0.minimumValue = 0.0
+        $0.maximumValue = 100
+        $0.boundaries = [0.0, 15.0, 18.0, 22.0, 25.0, 49.0, 67.0]
+    }
+
     private let song: Song
     init(song: Song) {
         self.song = song
@@ -34,6 +41,15 @@ final class SongDetailViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         setPlayerURL()
+
+        let displayLink = CADisplayLink(target: self, selector: #selector(handleDisplayLink))
+        displayLink.preferredFramesPerSecond = 10
+        displayLink.add(to: .main, forMode: .default)
+    }
+
+    @objc private func handleDisplayLink() {
+        boundarySlider.value += 1
+        boundarySlider.bufferValue += 5
     }
 
     private func setupView() {
@@ -41,7 +57,6 @@ final class SongDetailViewController: UIViewController {
         title = "Song Detail"
 
         view.addSubview(audioPlayerView)
-
         audioPlayerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         audioPlayerView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         audioPlayerView.topAnchor.constraint(equalTo: view.safeTopAnchor).isActive = true
@@ -53,6 +68,12 @@ final class SongDetailViewController: UIViewController {
         playOrPauseButton.centerYAnchor.constraint(equalTo: audioPlayerView.centerYAnchor).isActive = true
         playOrPauseButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         playOrPauseButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
+
+        view.addSubview(boundarySlider)
+        boundarySlider.leadingAnchor.constraint(equalTo: view.safeLeadinAnchor, constant: 30).isActive = true
+        boundarySlider.trailingAnchor.constraint(equalTo: view.safeTrailingAnchor, constant: -30).isActive = true
+        boundarySlider.topAnchor.constraint(equalTo: playOrPauseButton.bottomAnchor, constant: 50).isActive = true
+        boundarySlider.heightAnchor.constraint(equalToConstant: 3).isActive = true
     }
 
     private func setPlayerURL() {

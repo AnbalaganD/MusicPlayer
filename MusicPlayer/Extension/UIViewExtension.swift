@@ -8,7 +8,19 @@
 import UIKit
 
 extension UIView {
+    var safeLeadinAnchor: NSLayoutXAxisAnchor {
+        safeAreaLayoutGuide.leadingAnchor
+    }
+
+    var safeTrailingAnchor: NSLayoutXAxisAnchor {
+        safeAreaLayoutGuide.trailingAnchor
+    }
+
     var safeTopAnchor: NSLayoutYAxisAnchor {
         safeAreaLayoutGuide.topAnchor
+    }
+
+    var safeBottomAnchor: NSLayoutYAxisAnchor {
+        safeAreaLayoutGuide.bottomAnchor
     }
 }

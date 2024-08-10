@@ -18,23 +18,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = UINavigationController(rootViewController: LoginViewController())
+        window?.rootViewController = UINavigationController(
+            rootViewController: SongDetailViewController(
+                song: .init(
+                    id: "1234",
+                    name: "My favourite songs",
+                    url: URL(string: "https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav")!
+                )
+            )
+        )
         window?.makeKeyAndVisible()
         getAudioInfo()
     }
 
     private func getAudioInfo() {
-        guard let audioURL = Bundle.main.url(forResource: "river_bird_mix", withExtension: "wav") else {
-            return
-        }
-
-        Task {
-            do {
-                try await fetchInfo(of: URL(string: "https://file-examples.com/storage/fe9f6f893066954d9aac3a2/2017/11/file_example_MP3_5MG.mp3")!)
-            } catch {
-                print(error)
-            }
-        }
+//        guard let audioURL = Bundle.main.url(forResource: "river_bird_mix", withExtension: "wav") else {
+//            return
+//        }
+//
+//        Task {
+//            do {
+//                try await fetchInfo(of: URL(string: "https://file-examples.com/storage/fe9f6f893066954d9aac3a2/2017/11/file_example_MP3_5MG.mp3")!)
+//            } catch {
+//                print(error)
+//            }
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }
