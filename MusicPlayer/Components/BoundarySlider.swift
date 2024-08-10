@@ -21,17 +21,9 @@ final class BoundarySlider: UIControl {
     var bufferTrackColor: UIColor = .darkGray
     var boundaryColor: UIColor = .orange
 
-    var minimumValue: Float = 0.0 {
-        didSet {
-            updateFillTracker()
-        }
-    }
+    var minimumValue: Float = 0.0
 
-    var maximumValue: Float = 10.0 {
-        didSet {
-            updateFillTracker()
-        }
-    }
+    var maximumValue: Float = 1.0
 
     private var _value: Float = 0.0
     var value: Float {
@@ -162,10 +154,10 @@ final class BoundarySlider: UIControl {
         trackLayer.addSublayer(bufferLayer)
     }
 
-    private func updateFillTracker() {
-    }
-
     private func addBoundaryLayer() {
+        boundaryLayerDictionary.forEach { (_, boundaryLayer: CALayer) in
+            boundaryLayer.removeFromSuperlayer()
+        }
         boundaryLayerDictionary.removeAll()
         for boundary in boundaries {
             let boundaryLayer = CALayer()
