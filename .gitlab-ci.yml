@@ -25,6 +25,7 @@ build_project:
   script:
     - |
       chmod +x ./Script/build.sh
+      mkdir buildSudo
       echo "$SYS_PASS" | chown -R root:admin buildSudo
       echo "$SYS_PASS" | chmod -R ugo=rw,+X buildSudo
       echo "$SYS_PASS" | chmod -R 775 buildSudo
