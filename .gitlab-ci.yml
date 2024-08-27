@@ -36,12 +36,12 @@ build_project:
         ./Script/build.sh
       fi
   after_script:
-    - echo "$SYS_PASS" | sudo -S rm -rf buildSudo
+    # - echo "$SYS_PASS" | sudo -S rm -rf buildSudo
     - rm -rf build
-  artifacts:
-    when: always
-    paths:
-      - output
+  # artifacts:
+  #   when: always
+  #   paths:
+  #     - output
   rules:
     - if: $CI_PIPELINE_SOURCE != "schedule"
 
