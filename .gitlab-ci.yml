@@ -24,7 +24,7 @@ build_project:
     - ./generate_swifttlint_filelist.sh
   script:
     - |
-      chmod +x ./Script/build.sh
+      sudo chmod +x ./Script/build.sh
       if [[ -n "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
         echo "Within If condition"
         mkdir output
