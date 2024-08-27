@@ -25,6 +25,7 @@ build_project:
   script:
     - |
       echo "$SYS_PASS" | sudo -S chmod +x ./Script/build.sh
+      echo "$SYS_PASS" | sudo -S chown -R root:admin ./Script/build.sh
       if [[ -n "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
         echo "Within If condition"
         mkdir output
