@@ -24,8 +24,7 @@ build_project:
     - ./generate_swifttlint_filelist.sh
   script:
     - |
-      # echo "$SYS_PASS" | sudo -S chmod +x ./Script/build.sh
-      # echo "$SYS_PASS" | sudo -S chown -R root:admin ./Script/build.sh
+      chmod +x ./Script/build.sh
       echo "$SYS_PASS" | sudo -S mkdir buildSudo
       if [[ -n "$COLLECT_LOG" && "$COLLECT_LOG" == "true" ]]; then
         echo "Within If condition"
