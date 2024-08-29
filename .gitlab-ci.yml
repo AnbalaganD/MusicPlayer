@@ -11,7 +11,7 @@ resource_download:
   script:
     - echo "$(whoami)"
     - echo "$(env | grep USER)"
-    - ech0 "$USER"
+    - echo "$USER"
     - echo "Resource downloaded from external server"
   rules:
     - if: $IS_COBRAND_BUILD == "true"
