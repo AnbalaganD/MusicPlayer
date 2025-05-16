@@ -15,6 +15,7 @@ resource_download:
     - env | grep USER > print.txt
     - cat print.txt
     - echo "Resource downloaded from external server"
+    - env
   rules:
     - if: $IS_COBRAND_BUILD == "true"
       when: always
