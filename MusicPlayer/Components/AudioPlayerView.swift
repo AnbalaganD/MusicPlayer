@@ -1,9 +1,11 @@
 //
-//  AudioPlayer.swift
+//  AudioPlayerView.swift
 //  MusicPlayer
 //
-//  Created by Anbalaagn D on 23/08/23.
+//  Created by Anbalagan on 22/08/24.
 //
+
+import Foundation
 
 import AVFoundation
 import UIKit

@@ -19,13 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = UINavigationController(
-            rootViewController: SongDetailViewController(
-                song: .init(
-                    id: "1234",
-                    name: "My favourite songs",
-                    url: URL(string: "https://www2.cs.uic.edu/~i101/SoundFiles/StarWars60.wav")!
-                )
-            )
+            rootViewController: AudioPlayerViewController()
         )
         window?.makeKeyAndVisible()
     }
